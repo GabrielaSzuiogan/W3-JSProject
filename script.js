@@ -7,6 +7,10 @@ const usernames = [
   "BlueWhale",
   "GoldenOwl",
   "SwiftRabbit",
+  "BraveBunny",
+  "CleverFox",
+  "MightyEagle",
+  "HappyPanda",
 ];
 const myUsername =
   usernames[Math.floor(Math.random() * usernames.length)] +
