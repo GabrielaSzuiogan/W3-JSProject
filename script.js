@@ -59,7 +59,6 @@ messageInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") sendMessage();
 });
 
-// 3. Receiving Logic
 socket.onmessage = (event) => {
   const data = JSON.parse(event.data);
   const isMe = data.senderId === myId;
@@ -71,7 +70,6 @@ socket.onmessage = (event) => {
   );
 };
 
-// 4. Emoji Logic
 emojiBtn.addEventListener("click", () => {
   emojiPicker.style.display =
     emojiPicker.style.display === "none" ? "flex" : "none";
@@ -84,7 +82,6 @@ emojiPicker.querySelectorAll("span").forEach((emoji) => {
   });
 });
 
-// 5. Visual Helper
 function displayMessage(text, type, time, user) {
   const newMessage = document.createElement("div");
   newMessage.className = `message-group ${type}`;
